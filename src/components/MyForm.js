@@ -21,9 +21,15 @@ class MyForm extends Component {
 
     return (
       <form onSubmit={onSubmit}>
-        <Field name="title" component={this.renderInput} label="Enter Title" />
+        <Field
+          name="title"
+          type="text"
+          component={this.renderInput}
+          label="Enter Title"
+        />
         <Field
           name="email"
+          type="text"
           component={this.renderInput}
           label="Enter Description"
         />
