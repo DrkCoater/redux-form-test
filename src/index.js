@@ -18,8 +18,18 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 );
 
+const defaultState = {
+  form: null,
+  profile: {
+    user: {
+      title: 'Hello',
+      email: 'World'
+    }
+  }
+};
+
 ReactDOM.render(
-  <Provider store={createStore(reducers, enhancer)}>
+  <Provider store={createStore(reducers, defaultState, enhancer)}>
     <App />
   </Provider>,
   document.querySelector(".container")
